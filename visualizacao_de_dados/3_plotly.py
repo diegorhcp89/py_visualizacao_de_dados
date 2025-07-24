@@ -13,3 +13,15 @@ fig.show()
 
 fig = px.pie(df, names="Departamento", values="Salário", title="Distribuição de Salário por departamento")
 fig.show()
+
+# aula 2 -graficos avançados
+
+heatmap_data = df.pivot_table(index="Departamento", columns="Cargo", values="Salário", aggfunc="mean").fillna(0)
+
+fig = px.imshow(heatmap_data, title="Salários médios por departamento e cargo", color_continuous_scale="Viridis")
+
+fig.show()
+
+fig = px.scatter_3d(df, x="Salário", y="Departamento", z="Localização", color="Cargo", title="Gráfico 3D")
+
+fig.show()
