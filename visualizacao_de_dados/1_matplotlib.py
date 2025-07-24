@@ -35,3 +35,12 @@ plt.plot(x, y, color="purple", linestyle="--", marker="o")
 plt.title("Grafico 2")
 plt.grid()
 plt.show()
+
+# aula 3 - personalização de graficos
+y2 = [1, 11, 22, 33, 44, 66]
+plt.plot(x, y, linewidth=6, label="Linha 1")
+plt.plot(x, y2, label="Linha 2", linestyle="dotted", color="green")
+plt.xlim(0, 6)
+plt.ylim(0, 65)
+plt.legend(loc="lower left")
+plt.show()
