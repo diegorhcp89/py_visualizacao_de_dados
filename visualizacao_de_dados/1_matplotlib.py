@@ -66,3 +66,22 @@ axs[1, 1].plot(x, y, 'g', color="red")
 
 plt.tight_layout()
 plt.show()
+
+# aula 5 - estilos e temas
+
+plt.style.use("ggplot")
+plt.plot(x, y, label="Dados com ggplot")
+plt.legend()
+plt.show()
+
+plt.style.use("dark_background")
+plt.plot(x, y, label="Dados com dark_background", color="purple", linestyle="--", marker="o")
+plt.legend()
+plt.show()
+
+plt.style.use("seaborn-v0_8")
+plt.plot(x, y, label="Dados com seaborn-v0_8", color="purple", linestyle="--", marker="o")
+plt.legend()
+plt.show()
+
+print(plt.style.available)
