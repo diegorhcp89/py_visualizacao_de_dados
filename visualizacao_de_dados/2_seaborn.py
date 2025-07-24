@@ -27,3 +27,11 @@ plt.show()
 sns.pairplot(df[['Preço', 'Quantidade']])
 plt.title("Pairplot")
 plt.show()
+
+# aula 3 - estilizando seaborn
+sns.set_theme(style="darkgrid")
+sns.set_palette(sns.color_palette("coolwarm"))
+sns.set_context("poster", font_scale=.9)
+sns.barplot(x="Categoria", y="Quantidade", data=df)
+plt.title("Quantidade Total por Categoria")
+plt.show()
