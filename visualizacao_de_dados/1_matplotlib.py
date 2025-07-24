@@ -44,3 +44,25 @@ plt.xlim(0, 6)
 plt.ylim(0, 65)
 plt.legend(loc="lower left")
 plt.show()
+
+# aula 4 - subplot e layouts
+
+fig, axs = plt.subplots(2, 1)
+
+axs[0].plot(x, y, 'r')
+axs[0].set_title("Subplot 1")
+axs[1].bar(categorias, valores)
+axs[1].set_title("SubPlot 2")
+plt.tight_layout()
+plt.show()
+
+fig, axs = plt.subplots(2, 2)
+
+axs[0, 0].plot(x, y, 'g')
+axs[0, 1].scatter(x, y, color='orange')
+
+axs[1, 0].bar(categorias, valores)
+axs[1, 1].plot(x, y, 'g', color="red")
+
+plt.tight_layout()
+plt.show()
